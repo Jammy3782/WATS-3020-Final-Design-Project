@@ -7,28 +7,26 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
   
   <meta name="viewport" content="width=devise-width">
 
 <!--CSS-->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/responsive.css" media="screen and max-width: 900px)">
+  <link rel="stylesheet" href="main.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
-  <!---header--->
-  <div class="header"><div class="section-inner">
+  <!-- header  COMMMENTED OUT :   <div class="header"><div class="section-inner"> -->
+
     <h1>Vegetarian Cooking Class</h1>
    
-    
- 
-</head>
-<body>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -61,11 +59,28 @@
     </div>
   </div>
 </nav>
-  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fsQxOxNr4w8" frameborder="0" allowfullscreen></iframe>
 <div class="container">
  
 </div>
-
+<div id="map">
+  <script>
+      function initMap() {
+        var uluru = {lat: 47.6182, lng: -122.1846};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYMvTHj7ooTCU5XAlf_kW4QiTfcDxx1qw&callback=initMap">
+    </script>
+  </div>
 <div class="container" style="text-align: center; width: 25%;">
   <h2>Want to chat?</h2>
   <form class="form-horizontal">
@@ -83,7 +98,7 @@
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-       
+      
       </div>
     </div>
     <div class="form-group">        
@@ -92,10 +107,11 @@
       </div>
     </div>
   </form>
-       <footer>
-        <p>&copy; Jamila Youngblood 2017</p>
-      </footer>
-</div>
-</body>
-</html>
+ </div> 
+   <footer class="footer">
+     
+        <p>&copy; Jamila Youngblood 2017  <a  href="https://imgleak.com/user/jammy_wanderlust/201868143/" class="btn btn-block btn-social btn-instagram"><span class="fa fa-instagram"></span></a></p>
+  </footer>
+  
 
+</body>
