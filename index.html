@@ -22,12 +22,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
-<body>
+<body style="color: white;">
+    
+
   <!-- header  COMMMENTED OUT :   <div class="header"><div class="section-inner"> -->
 
     <h1>Vegetarian Cooking Class</h1>
    
-
+<!----Nav Bar--->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -40,30 +42,94 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+     
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1-1</a></li>
-            <li><a href="#">Page 1-2</a></li>
-            <li><a href="#">Page 1-3</a></li>
-          </ul>
+   
         </li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Contact Me</a></li>
+      
+        <li><a href="#contactinfo"><span class="glyphicon glyphicon-apple"></span> Contact Me</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fsQxOxNr4w8" frameborder="0" allowfullscreen></iframe>
-<div class="container">
- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!---button-->
+<button style=" display: table; 
+ margin: 0 auto;
+ margin-bottom: 100px;"class="btn-danger" id="show">Click Here for Ingredients</button>
+<script>
+$(document).ready(function(){
+   
+        $("#recipereveal").hide();
+    
+    $("#show").click(function(){
+        if ($("#recipereveal").is(":hidden")){  
+            $("#recipereveal").show();
+              
+         }
+        else
+        {
+             $("#recipereveal").hide();  
+        }
+    });
+});
+</script>
+  
+ <!---button end--> 
+ <!-- Recipe reveal -->  
+  <div id="recipereveal" > 
+ <div class="container">
+  <ul>     
+<h3>Ingredients:</h3>
+   <div class="row">
+   <div class="col-md-6">
+<li>6 oyster mushrooms</li> 
+
+<li>3 cups hot water</li>
+
+<li>⅓ cup rice wine vinegar</li>
+
+<li>1 pkg brown rice spaghetti <br>(approx. 340 g - we recommend tinkyada organic brown rice spaghetti)</li>
+
+<li>3 Tbsp olive oil</li>
+
+<li>⅛ cup shallot, finely chopped</li>
+
+<li>1 clove garlic, minced</li>
+
+<li>1 cup leek, finely chopped</li></div>
+<div class="col-md-6">
+<li>1 cup white wine</li> 
+
+<li>1 cup pasta water (reserved from cooking noodles)</li> 
+
+<li>2 tsp sea salt</li>
+
+<li>½ tsp ground pepper</li>
+
+<li>½ tsp dried oregano</li>
+
+<li>½ tsp dried basil</li>
+
+<li>¼ tsp dried chilli peppers</li>
+
+<li>1 Tbsp lemon juice</li>
+
+<li>3 cups lacinato kale, stems removed, roughly chopped</li>
+
+ <li>⅛ cup pomegranate jewels</li> </div> </div>
+   </ul> </div>
 </div>
-<div id="map">
+<!---Map--> 
+<h4 style="text-align: center;"> 
+Want to know where to find these ingredients? See below!
+  </h4>  
+<div style="margin-bottom: 100px;"id="map">
   <script>
       function initMap() {
         var uluru = {lat: 47.6182, lng: -122.1846};
@@ -81,37 +147,16 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYMvTHj7ooTCU5XAlf_kW4QiTfcDxx1qw&callback=initMap">
     </script>
   </div>
-<div class="container" style="text-align: center; width: 25%;">
-  <h2>Want to chat?</h2>
-  <form class="form-horizontal">
-    <div class="form-group">
-     
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Enter email">
-      </div>
-    </div>
-    <div class="form-group">
-      
-      <div class="col-sm-10">          
-        <input type="message" class="form-control" id="message" placeholder="Enter message">
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-      
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </form>
- </div> 
+ 
+   <div style="width: 100px; height: 100ox;">
+</div>
+
    <footer class="footer">
      
-        <p>&copy; Jamila Youngblood 2017  <a  href="https://imgleak.com/user/jammy_wanderlust/201868143/" class="btn btn-block btn-social btn-instagram"><span class="fa fa-instagram"></span></a></p>
+        <p id="contactinfo">&copy; Jamila Youngblood 2017, (206) 555-5555 <a  href="https://imgleak.com/user/jammy_wanderlust/201868143/" class="btn btn-block btn-social btn-instagram"><span class="fa fa-instagram"></span></a></p>
   </footer>
   
 
 </body>
+</html>
+
